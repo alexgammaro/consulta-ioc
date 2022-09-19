@@ -8,13 +8,13 @@ $ npm install
 Build the container:
 
 ```bash
-docker build -t puppeteer-chrome-linux .
+sudo docker build -t puppeteer-chrome-linux .
 ```
 
 Run the container by passing `node -e "<index.js content as a string>"` as the command:
 
 ```bash
- docker run -i --init --rm --cap-add=SYS_ADMIN \
+ sudo docker run -i --init --rm --cap-add=SYS_ADMIN \
    --name puppeteer-chrome puppeteer-chrome-linux \
    node -e "`cat index.js`"
 ```
